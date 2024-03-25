@@ -22,5 +22,9 @@ void main() {
         build: () => counterBloc,
         act: ((bloc) => bloc.add(CounterDecrementPressed())),
         expect: () => [-1]);
+    blocTest('emits [0] when CounterResetPressed',
+        build: () => counterBloc,
+        act: ((bloc) => bloc.add(CounterResetPressed())),
+        expect: () => [0]);
   });
 }

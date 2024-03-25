@@ -44,6 +44,14 @@ class CounterView extends StatelessWidget {
                 print('onPressed CounterDecrementPressed');
                 counterBlocProvider.add(CounterDecrementPressed());
               }),
+          const SizedBox(height: 8),
+          FloatingActionButton(
+              key: const Key('counterView_reset_floatingActionButton'),
+              child: Text('R'),
+              onPressed: () {
+                print('onPressed CounterResetPressed');
+                counterBlocProvider.add(CounterResetPressed());
+              }),
         ],
       ),
     );
